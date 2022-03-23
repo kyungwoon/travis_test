@@ -18,13 +18,16 @@ before_install:
 script: "./gradlew clean build"
 
 before_deploy:
-  - mkdir -p before-deploy
-  - cp scripts/*.sh before-deploy/
-  - cp appspec.yml before-deploy/
-  - cp build/libs/*.jar before-deploy/
-  - cd before-deploy && zip -r before-deploy *
-  - cd ../ && mkdir -p deploy
-  - mv before-deploy/before-deploy.zip deploy/springboot-webservice.zip
+  - zip -r hanghae8-final-project ./*
+  - mkdir -p deploy
+  - mv used-car-admin.zip deploy/hanghae8-final-project.zip
+#  - mkdir -p before-deploy
+#  - cp scripts/*.sh before-deploy/
+#  - cp appspec.yml before-deploy/
+#  - cp build/libs/*.jar before-deploy/
+#  - cd before-deploy && zip -r before-deploy *
+#  - cd ../ && mkdir -p deploy
+#  - mv before-deploy/before-deploy.zip deploy/hanghae8-final-project.zip
 
 deploy:
   - provider: s3
@@ -37,20 +40,20 @@ deploy:
     local_dir: deploy # before_deploy에서 생성한 디렉토리
     wait-until-deployed: true
 
-  - provider: codedeploy
-    access_key_id: $AWS_ACCESS_KEY # Travis repo settings에 설정된 값
-    secret_access_key: $AWS_SECRET_KEY # Travis repo settings에 설정된 값
-    bucket: hanghae8-final-project-travis # S3 버킷
-    key: hanghae8-final-project.zip # 빌드 파일을 압축해서 전달
-    bundle_type: zip
-    application: hanghae8-admin # 웹 콘솔에서 등록한 CodeDeploy 어플리케이션
-    deployment_group: hanghae8-admin-group # 웹 콘솔에서 등록한 CodeDeploy 배포 그룹
-    region: ap-northeast-2
-    wait-until-deployed: true
+#  - provider: codedeploy
+#    access_key_id: $AWS_ACCESS_KEY # Travis repo settings에 설정된 값
+#    secret_access_key: $AWS_SECRET_KEY # Travis repo settings에 설정된 값
+#    bucket: hanghae8-final-project-travis # S3 버킷
+#    key: hanghae8-final-project.zip # 빌드 파일을 압축해서 전달
+#    bundle_type: zip
+#    application: hanghae8-admin # 웹 콘솔에서 등록한 CodeDeploy 어플리케이션
+#    deployment_group: hanghae8-admin-group # 웹 콘솔에서 등록한 CodeDeploy 배포 그룹
+#    region: ap-northeast-2
+#    wait-until-deployed: true
 
 
 # CI 실행 완료 시 메일로 알람
-notifications:
-  email:
-    recipients:
-      - nakw0410@gmail.com
+#notifications:
+#  email:
+#    recipients:
+#      - nakw0410@gmail.com
