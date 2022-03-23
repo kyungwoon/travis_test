@@ -1,0 +1,19 @@
+version: 0.0
+os : linux
+files :
+  - source : /
+    destination: /home/ubuntu/app/step2/zip/
+    overwrite : yes
+
+
+### 파일 권한 추가
+#permission:
+#  - object: /
+#    pattern: "**"
+#    owner: ubuntu
+#    group: ubuntu
+#
+#hooks:
+#  AfterInstall: # 배포가 끝나면 아래 명령어를 실행
+#    - location: execute-deploy.sh
+#      timeout: 180
