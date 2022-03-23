@@ -18,9 +18,9 @@ before_install:
 script: "./gradlew clean build"
 
 before_deploy:
-  - zip -r used-car-admin *
+  - zip -r hanghae8-final-project ./*
   - mkdir -p deploy
-  - mv used-car-admin.zip deploy/used-car-admin.zip
+  - mv used-car-admin.zip deploy/hanghae8-final-project.zip
 #  - mkdir -p before-deploy
 #  - cp scripts/*.sh before-deploy/
 #  - cp appspec.yml before-deploy/
