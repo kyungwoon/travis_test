@@ -20,7 +20,7 @@ script: "./gradlew clean build"
 before_deploy:
   - zip -r hanghae8-final-project ./*
   - mkdir -p deploy
-  - mv used-car-admin.zip deploy/hanghae8-final-project.zip
+  - mv hanghae8-final-project.zip deploy/hanghae8-final-project.zip
 #  - mkdir -p before-deploy
 #  - cp scripts/*.sh before-deploy/
 #  - cp appspec.yml before-deploy/
