@@ -39,8 +39,8 @@ deploy:
     bucket: hanghae8-final-project-travis # S3 버킷
     key: hanghae8-final-project.zip # 빌드 파일을 압축해서 전달
     bundle_type: zip
-    application: hanghae8-final-project # 웹 콘솔에서 등록한 CodeDeploy 어플리케이션
-    deployment_group: hanghae8-final-project-group # 웹 콘솔에서 등록한 CodeDeploy 배포 그룹
+    application: hanghae8-admin # 웹 콘솔에서 등록한 CodeDeploy 어플리케이션
+    deployment_group: hanghae8-admin-group # 웹 콘솔에서 등록한 CodeDeploy 배포 그룹
     region: ap-northeast-2
     wait-until-deployed: true
 
