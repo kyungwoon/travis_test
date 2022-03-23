@@ -1,9 +1,9 @@
 package com.example.travis_test.controller;
 
-import com.example.boards.domain.Board;
-import com.example.boards.dto.BoardRequestDto;
-import com.example.boards.repository.BoardRepository;
-import com.example.boards.service.BoardService;
+import com.example.travis_test.domain.Board;
+import com.example.travis_test.dto.BoardRequestDto;
+import com.example.travis_test.repository.BoardRepository;
+import com.example.travis_test.service.BoardService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;

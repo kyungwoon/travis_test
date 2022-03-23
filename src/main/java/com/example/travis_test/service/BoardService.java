@@ -1,8 +1,8 @@
 package com.example.travis_test.service;
 
-import com.example.boards.domain.Board;
-import com.example.boards.dto.BoardRequestDto;
-import com.example.boards.repository.BoardRepository;
+import com.example.travis_test.domain.Board;
+import com.example.travis_test.dto.BoardRequestDto;
+import com.example.travis_test.repository.BoardRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

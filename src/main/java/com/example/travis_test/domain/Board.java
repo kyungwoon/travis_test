@@ -1,6 +1,6 @@
 package com.example.travis_test.domain;
 
-import com.example.boards.dto.BoardRequestDto;
+import com.example.travis_test.dto.BoardRequestDto;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
